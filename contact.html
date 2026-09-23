@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Request & Incident Hotline | Cyber Liability Insurance Broker</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/index.css">
+  
+  <!-- Tailwind CSS 3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#f8fafc',
+              dark: '#020617',
+              primary: '#06b6d4',
+              primaryHover: '#0891b2',
+              secondary: '#0f172a',
+              secondaryHover: '#1e293b',
+              accent: '#0ea5e9',
+              emerald: '#10b981',
+              navy: '#0f172a',
+            },
+            slate: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              855: '#0f172a',
+              900: '#090d16',
+              950: '#040711',
+              955: '#020617',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            outfit: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-955 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col font-sans">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-slate-955 font-bold shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform duration-300">
+            <i data-lucide="shield-check" class="w-6 h-6 text-slate-955"></i>
+          </div>
+          <span class="font-outfit text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-brand-primary transition-colors">
+            Cyber<span class="text-brand-primary">Guard</span>
+          </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+          <a href="index.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-cyan-400 transition-colors">Home</a>
+          <a href="home2.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-cyan-400 transition-colors">Home 2</a>
+          <a href="about.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-cyan-400 transition-colors">About Us</a>
+          <a href="services.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-cyan-400 transition-colors">Coverage Plans</a>
+          <a href="gallery.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-cyan-400 transition-colors">Risk Assessment</a>
+          <a href="blog.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-cyan-400 transition-colors">Threat Insights</a>
+          <a href="contact.html" class="px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors text-brand-primary dark:text-cyan-400">Contact</a>
+        </div>
+
+        <!-- Desktop Utility Buttons -->
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <button class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          
+          <button class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">
+            <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
+            <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
+          </button>
+
+          <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-slate-955 text-sm font-bold hover:shadow-lg hover:shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5">Get Quote</a>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <div class="flex items-center space-x-3 lg:hidden rtl:space-x-reverse">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
+      <a href="index.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="home2.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home 2</a>
+      <a href="about.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About Us</a>
+      <a href="services.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Coverage Plans</a>
+      <a href="gallery.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Risk Assessment</a>
+      <a href="blog.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Threat Insights</a>
+      <a href="contact.html" class="px-3 py-2 rounded-lg text-base font-semibold text-brand-primary bg-cyan-50/50 dark:bg-cyan-955/20">Contact</a>
+      <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
+      <div class="flex flex-col space-y-2.5">
+        <a href="contact.html" class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-slate-955 text-sm font-bold shadow-md shadow-cyan-500/20">Request Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-20">
+    
+    <!-- Hero Banner -->
+    <section class="py-16 bg-slate-100/70 dark:bg-slate-955 text-slate-900 dark:text-white relative overflow-hidden border-b border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-500/10 text-brand-primary dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4 border border-cyan-500/20">
+          Fast Underwriting Response
+        </span>
+        <h1 class="text-4xl md:text-5xl font-extrabold font-outfit tracking-tight mb-4 text-slate-900 dark:text-white">
+          Request a Custom Cyber Insurance Quote
+        </h1>
+        <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto text-base sm:text-lg">
+          Submit your enterprise risk details for competitive multi-carrier policy quotes or contact our 24/7 emergency incident hotline.
+        </p>
+      </div>
+    </section>
+    <div class="h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent w-full"></div>
+
+    <!-- Main Form & Contact Section -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-955">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left Form Column -->
+          <div class="lg:col-span-8 glass-card p-8 sm:p-10 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800">
+            <h2 class="text-2xl font-bold font-outfit text-slate-900 dark:text-white mb-6">Cyber Liability Insurance Quote Request Form</h2>
+            
+            <form id="quote-form" onsubmit="event.preventDefault(); alert('Thank you! Your cyber risk profile has been received. A senior underwriting broker will contact you within 2 business hours.');" class="space-y-6">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Company Legal Name *</label>
+                  <input type="text" required placeholder="e.g. Apex Health Systems Inc." class="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm font-medium focus:ring-2 focus:ring-brand-primary">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Corporate Email Address *</label>
+                  <input type="email" required placeholder="e.g. ciso@apexhealth.com" class="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm font-medium focus:ring-2 focus:ring-brand-primary">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Industry Sector *</label>
+                  <select required class="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm font-medium focus:ring-2 focus:ring-brand-primary">
+                    <option value="Healthcare">Healthcare & PHI</option>
+                    <option value="Fintech">Fintech & Financial</option>
+                    <option value="SaaS">SaaS & Software</option>
+                    <option value="Ecommerce">E-Commerce & Retail</option>
+                    <option value="Manufacturing">Manufacturing & OT</option>
+                    <option value="Legal">Legal & Professional</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Annual Revenue *</label>
+                  <select required class="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm font-medium focus:ring-2 focus:ring-brand-primary">
+                    <option value="Under 5M">Under $5M USD</option>
+                    <option value="5M-25M">$5M - $25M USD</option>
+                    <option value="25M-100M">$25M - $100M USD</option>
+                    <option value="100M+">$100M+ USD</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Desired Limit *</label>
+                  <select required class="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm font-medium focus:ring-2 focus:ring-brand-primary">
+                    <option value="1M">$1,000,000 USD</option>
+                    <option value="2M">$2,000,000 USD</option>
+                    <option value="5M" selected>$5,000,000 USD</option>
+                    <option value="10M">$10,000,000 USD</option>
+                    <option value="25M">$25,000,000 USD</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Security Controls in Place</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold">
+                  <label class="flex items-center gap-2 p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+                    <input type="checkbox" checked class="rounded text-brand-primary"> Multi-Factor Authentication (MFA)
+                  </label>
+                  <label class="flex items-center gap-2 p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+                    <input type="checkbox" checked class="rounded text-brand-primary"> Endpoint Detection & Response (EDR)
+                  </label>
+                  <label class="flex items-center gap-2 p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+                    <input type="checkbox" checked class="rounded text-brand-primary"> Air-Gapped Immutable Backups
+                  </label>
+                  <label class="flex items-center gap-2 p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+                    <input type="checkbox" class="rounded text-brand-primary"> Employee Security Awareness Training
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Additional Risk Details / Notes</label>
+                <textarea rows="4" placeholder="Describe any prior cyber incidents, specific cloud vendor dependencies, or underwriting requirements..." class="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-955 text-sm font-medium focus:ring-2 focus:ring-brand-primary"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-slate-955 font-bold text-base shadow-lg shadow-cyan-500/25 transition-all">
+                Submit Quote Request
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Right Sidebar Column -->
+          <div class="lg:col-span-4 space-y-8">
+            
+            <!-- Hotline Card -->
+            <div class="glass-card p-8 rounded-3xl shadow-xl border border-red-500/30 bg-gradient-to-br from-red-500/10 via-slate-900 to-slate-955 text-white space-y-4">
+              <div class="flex items-center gap-3 text-red-400">
+                <i data-lucide="phone-call" class="w-6 h-6 animate-pulse"></i>
+                <span class="text-xs font-extrabold uppercase tracking-widest">EMERGENCY HOTLINE</span>
+              </div>
+              <h3 class="text-2xl font-bold font-outfit">Active Ransomware or Breach Emergency?</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                If your business is currently experiencing an active cyber attack or data breach, do not fill out standard web forms. Call our 24/7 incident hotline immediately.
+              </p>
+              <div class="pt-2">
+                <a href="tel:18005552923" class="block w-full text-center py-3.5 rounded-xl bg-red-500 hover:bg-red-600 text-white font-extrabold text-base shadow-lg shadow-red-500/30">
+                  Call +1 (800) 555-CYBER
+                </a>
+              </div>
+            </div>
+
+            <!-- Office Info -->
+            <div class="glass-card p-8 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 space-y-6">
+              <h4 class="font-bold text-slate-900 dark:text-white font-outfit text-lg">Brokerage Headquarters</h4>
+              
+              <ul class="space-y-4 text-xs font-semibold text-slate-600 dark:text-slate-300">
+                <li class="flex items-start gap-3">
+                  <i data-lucide="map-pin" class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span>100 Financial District Tower, Suite 4200, New York, NY 10005</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="mail" class="w-5 h-5 text-cyan-400 flex-shrink-0"></i>
+                  <span>underwriting@cyberguardbroker.com</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="shield" class="w-5 h-5 text-cyan-400 flex-shrink-0"></i>
+                  <span>License # CYB-99824-NY (Licensed in 50 US States)</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: Google Maps & Global Operations Hub -->
+    <section class="py-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-3.5 py-1.5 rounded-full border border-cyan-500/20 uppercase tracking-widest">
+            GLOBAL OPERATIONS LOCATION
+          </span>
+          <h2 class="text-3xl font-bold font-outfit text-slate-900 dark:text-white">
+            Visit Our Underwriting Headquarters
+          </h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Located in the heart of New York's Financial District, providing 24/7 underwriting support and breach response advocacy across 50 US states.
+          </p>
+        </div>
+
+        <!-- Google Map Iframe Container -->
+        <div class="w-full h-96 sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 dark:border-slate-800 relative group">
+          <iframe 
+            title="CyberGuard Headquarters Location"
+            src="https://maps.google.com/maps?q=100+Wall+Street,+New+York,+NY+10005&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-full dark:opacity-90 transition-all duration-500">
+          </iframe>
+          
+          <!-- Floating Location Badge Overlay -->
+          <div class="absolute bottom-6 left-6 glass-card p-4 rounded-2xl border border-cyan-500/30 shadow-xl hidden sm:flex items-center gap-3 bg-slate-955/90 text-white">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-xs text-white">CyberGuard Brokerage H.Q.</h4>
+              <p class="text-[11px] text-slate-400">100 Financial District Tower, New York, NY</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+    <!-- ================= FOOTER ================= -->
+  <footer class="glass-footer py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-slate-955 font-bold shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform duration-300">
+              <i data-lucide="shield-check" class="w-6 h-6 text-slate-955"></i>
+            </div>
+            <span class="font-outfit text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-brand-primary transition-colors">
+              Cyber<span class="text-brand-primary">Guard</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            Independent Cyber Liability Insurance Brokerage. Specializing in enterprise cyber risk assessment, data breach liability, ransomware extortion defense, and business interruption coverage.
+          </p>
+          
+          <!-- Social Icons -->
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-slate-955 transition-all duration-300" aria-label="LinkedIn">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-slate-955 transition-all duration-300" aria-label="X (formerly Twitter)">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-slate-955 transition-all duration-300" aria-label="YouTube">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-slate-955 transition-all duration-300" aria-label="GitHub">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-wider font-outfit">Policy Coverage</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Data Breach Response</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Ransomware Protection</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Business Interruption</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Wire Transfer Fraud</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-wider font-outfit">Cyber Risk Hub</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-brand-primary transition-colors">Risk Exposure Overview</a></li>
+            <li><a href="home2.html" class="hover:text-brand-primary transition-colors">Enterprise Risk Matrix</a></li>
+            <li><a href="gallery.html" class="hover:text-brand-primary transition-colors">Risk Score Calculator</a></li>
+            <li><a href="about.html" class="hover:text-brand-primary transition-colors">Underwriting Partners</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts and Emergency Hotline -->
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-wider font-outfit">24/7 Incident Hotline</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="phone-call" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span class="font-bold text-cyan-400">+1 (800) 555-CYBER</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span class="break-all">claims@cyberguardbroker.com</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="shield" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>Emergency Breach Response Hotline 24/7/365</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright row -->
+      <div class="footer-copyright pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
+        <p>&copy; 2026 CyberGuard Liability Insurance Brokerage. All rights reserved.</p>
+        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy &amp; Compliance Policy</a>
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Terms of Insurance Brokerage</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
