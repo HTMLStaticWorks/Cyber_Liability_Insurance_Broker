@@ -284,9 +284,11 @@ function initQuoteModal() {
         <!-- Progress Stepper -->
         <div class="px-6 sm:px-8 py-4 bg-slate-950/60 border-b border-slate-800/80">
           <div class="flex items-center justify-between relative max-w-md mx-auto">
-            <!-- Line background -->
-            <div class="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-slate-800 -z-0"></div>
-            <div id="modal-step-line" class="absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-gradient-to-r from-brand-primary to-cyan-400 transition-all duration-300 w-0 -z-0"></div>
+            <!-- Line background container -->
+            <div class="absolute left-4 right-4 top-4 -translate-y-1/2 h-0.5 -z-0">
+              <div class="w-full h-full bg-slate-800"></div>
+              <div id="modal-step-line" class="absolute left-0 top-0 h-full bg-gradient-to-r from-brand-primary to-cyan-400 transition-all duration-300 w-0"></div>
+            </div>
 
             <!-- Step 1 Indicator -->
             <div class="step-indicator flex flex-col items-center relative z-10" data-step="1">
@@ -776,16 +778,16 @@ function initThreatSimulator() {
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => {
-        t.classList.remove('active', 'bg-cyan-500/20', 'border-cyan-400', 'text-white', 'shadow-lg', 'shadow-cyan-500/10');
-        t.classList.add('bg-slate-800/60', 'border-slate-700', 'text-slate-300');
+        t.classList.remove('active', 'bg-cyan-500/20', 'border-cyan-500', 'dark:border-cyan-400', 'text-slate-900', 'dark:text-white', 'shadow-lg', 'shadow-cyan-500/10');
+        t.classList.add('bg-white/60', 'dark:bg-slate-800/60', 'border-slate-200', 'dark:border-slate-700', 'text-slate-700', 'dark:text-slate-300');
         const desc = t.querySelector('span:last-child');
-        if (desc) desc.className = 'text-[11px] text-slate-400 font-normal line-clamp-1';
+        if (desc) desc.className = 'text-[11px] text-slate-500 dark:text-slate-400 font-normal line-clamp-1';
       });
 
-      tab.classList.add('active', 'bg-cyan-500/20', 'border-cyan-400', 'text-white', 'shadow-lg', 'shadow-cyan-500/10');
-      tab.classList.remove('bg-slate-800/60', 'border-slate-700', 'text-slate-300');
+      tab.classList.add('active', 'bg-cyan-500/20', 'border-cyan-500', 'dark:border-cyan-400', 'text-slate-900', 'dark:text-white', 'shadow-lg', 'shadow-cyan-500/10');
+      tab.classList.remove('bg-white/60', 'dark:bg-slate-800/60', 'border-slate-200', 'dark:border-slate-700', 'text-slate-700', 'dark:text-slate-300');
       const desc = tab.querySelector('span:last-child');
-      if (desc) desc.className = 'text-[11px] text-slate-300 font-normal line-clamp-1';
+      if (desc) desc.className = 'text-[11px] text-slate-600 dark:text-slate-300 font-normal line-clamp-1';
 
       activeScenario = tab.getAttribute('data-scenario');
       updateSimulator();

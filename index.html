@@ -59,7 +59,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-955 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col font-sans">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-955 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col font-sans overflow-x-hidden w-full max-w-full">
 
   <!-- ================= NAVBAR ================= -->
   <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -174,7 +174,7 @@
           </p>
           
           <!-- Credentials row -->
-          <div class="grid grid-cols-3 gap-4 py-3 border-y border-white/10 w-full max-w-2xl mx-auto justify-items-center">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 py-3 border-y border-white/10 w-full max-w-2xl mx-auto justify-items-center">
             <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse">
               <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 flex-shrink-0"></i>
               <span class="text-xs sm:text-sm font-medium text-slate-200">A+ Rated Carriers</span>
@@ -417,7 +417,7 @@
     </section>
 
     <!-- ================= UNIQUE SECTION: INTERACTIVE CYBER INCIDENT & RISK COVERAGE SIMULATOR ================= -->
-    <section id="cyber-threat-simulator" class="py-20 bg-gradient-to-b from-slate-900 via-slate-955 to-slate-900 text-white relative overflow-hidden border-y border-cyan-500/20">
+    <section id="cyber-threat-simulator" class="py-20 bg-gradient-to-b from-slate-50 via-cyan-50/20 to-slate-100 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-white relative overflow-hidden border-y border-cyan-500/20">
       <!-- Glow effect overlays -->
       <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -426,14 +426,14 @@
         
         <!-- Header badge & titles -->
         <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-semibold text-xs tracking-wider uppercase backdrop-blur-md">
-            <i data-lucide="cpu" class="w-4 h-4 text-cyan-400 animate-pulse"></i>
+          <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-cyan-500/10 dark:bg-cyan-500/10 border border-cyan-500/30 text-cyan-600 dark:text-cyan-400 font-semibold text-xs tracking-wider uppercase backdrop-blur-md">
+            <i data-lucide="cpu" class="w-4 h-4 text-cyan-600 dark:text-cyan-400 animate-pulse"></i>
             <span>Interactive Risk Engine</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-white tracking-tight">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-slate-900 dark:text-white tracking-tight">
             Live Cyber Incident & <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-sky-300 to-emerald-400">Coverage Simulator</span>
           </h2>
-          <p class="text-slate-300 font-normal text-base sm:text-lg max-w-2xl mx-auto">
+          <p class="text-slate-600 dark:text-slate-300 font-normal text-base sm:text-lg max-w-2xl mx-auto">
             Simulate actual cyber attack vectors against your company size. See your uninsured financial exposure versus guaranteed CyberGuard policy coverage in real-time.
           </p>
         </div>
@@ -445,64 +445,64 @@
           <div class="lg:col-span-6 space-y-6">
             
             <!-- Attack Vector Tabs -->
-            <div class="glass-card p-6 rounded-3xl border border-white/10 space-y-4 shadow-2xl backdrop-blur-xl">
-              <label class="block text-xs font-bold uppercase tracking-wider text-cyan-300 font-outfit flex items-center gap-2">
-                <i data-lucide="shield-alert" class="w-4 h-4 text-cyan-400"></i>
+            <div class="glass-card p-6 rounded-3xl border border-slate-200 dark:border-white/10 space-y-4 shadow-2xl backdrop-blur-xl">
+              <label class="block text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-300 font-outfit flex items-center gap-2">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-cyan-600 dark:text-cyan-400"></i>
                 1. Select Attack Vector Scenario
               </label>
               
-              <div class="grid grid-cols-2 gap-3" id="sim-scenario-tabs">
-                <button type="button" data-scenario="ransomware" class="sim-tab active text-left p-3.5 rounded-xl border transition-all duration-200 bg-cyan-500/20 border-cyan-400 text-white font-semibold text-xs sm:text-sm flex flex-col gap-1.5 shadow-lg shadow-cyan-500/10">
-                  <div class="flex items-center justify-between">
-                    <span class="font-bold flex items-center gap-1.5"><i data-lucide="lock" class="w-4 h-4 text-cyan-400"></i> Ransomware</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded bg-red-500/20 text-red-300 font-medium">Critical</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="sim-scenario-tabs">
+                <button type="button" data-scenario="ransomware" class="sim-tab active text-left p-3.5 rounded-xl border transition-all duration-200 bg-cyan-500/20 border-cyan-500 dark:border-cyan-400 text-slate-900 dark:text-white font-semibold text-xs sm:text-sm flex flex-col gap-1.5 shadow-lg shadow-cyan-500/10">
+                  <div class="flex items-center justify-between flex-wrap gap-1">
+                    <span class="font-bold flex items-center gap-1.5"><i data-lucide="lock" class="w-4 h-4 text-cyan-600 dark:text-cyan-400 flex-shrink-0"></i> Ransomware</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-red-500/20 text-red-700 dark:text-red-300 font-medium">Critical</span>
                   </div>
-                  <span class="text-[11px] text-slate-300 font-normal line-clamp-1">Extortion demand & server downtime</span>
+                  <span class="text-[11px] text-slate-600 dark:text-slate-300 font-normal line-clamp-1">Extortion demand & server downtime</span>
                 </button>
 
-                <button type="button" data-scenario="wirefraud" class="sim-tab text-left p-3.5 rounded-xl border transition-all duration-200 bg-slate-800/60 border-slate-700 text-slate-300 hover:border-slate-500 font-semibold text-xs sm:text-sm flex flex-col gap-1.5">
-                  <div class="flex items-center justify-between">
-                    <span class="font-bold flex items-center gap-1.5"><i data-lucide="send" class="w-4 h-4 text-sky-400"></i> Wire Fraud</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-medium">High</span>
+                <button type="button" data-scenario="wirefraud" class="sim-tab text-left p-3.5 rounded-xl border transition-all duration-200 bg-white/60 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-500 font-semibold text-xs sm:text-sm flex flex-col gap-1.5">
+                  <div class="flex items-center justify-between flex-wrap gap-1">
+                    <span class="font-bold flex items-center gap-1.5"><i data-lucide="send" class="w-4 h-4 text-sky-500 dark:text-sky-400 flex-shrink-0"></i> Wire Fraud</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-700 dark:text-amber-300 font-medium">High</span>
                   </div>
-                  <span class="text-[11px] text-slate-400 font-normal line-clamp-1">Social engineering & spoofing</span>
+                  <span class="text-[11px] text-slate-500 dark:text-slate-400 font-normal line-clamp-1">Social engineering & spoofing</span>
                 </button>
 
-                <button type="button" data-scenario="databreach" class="sim-tab text-left p-3.5 rounded-xl border transition-all duration-200 bg-slate-800/60 border-slate-700 text-slate-300 hover:border-slate-500 font-semibold text-xs sm:text-sm flex flex-col gap-1.5">
-                  <div class="flex items-center justify-between">
-                    <span class="font-bold flex items-center gap-1.5"><i data-lucide="database" class="w-4 h-4 text-emerald-400"></i> Data Leak</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-medium">Regulatory</span>
+                <button type="button" data-scenario="databreach" class="sim-tab text-left p-3.5 rounded-xl border transition-all duration-200 bg-white/60 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-500 font-semibold text-xs sm:text-sm flex flex-col gap-1.5">
+                  <div class="flex items-center justify-between flex-wrap gap-1">
+                    <span class="font-bold flex items-center gap-1.5"><i data-lucide="database" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i> Data Leak</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-medium">Regulatory</span>
                   </div>
-                  <span class="text-[11px] text-slate-400 font-normal line-clamp-1">Exposed PII & class action suits</span>
+                  <span class="text-[11px] text-slate-500 dark:text-slate-400 font-normal line-clamp-1">Exposed PII & class action suits</span>
                 </button>
 
-                <button type="button" data-scenario="cloudoutage" class="sim-tab text-left p-3.5 rounded-xl border transition-all duration-200 bg-slate-800/60 border-slate-700 text-slate-300 hover:border-slate-500 font-semibold text-xs sm:text-sm flex flex-col gap-1.5">
-                  <div class="flex items-center justify-between">
-                    <span class="font-bold flex items-center gap-1.5"><i data-lucide="cloud-off" class="w-4 h-4 text-indigo-400"></i> Cloud Outage</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-medium">Operational</span>
+                <button type="button" data-scenario="cloudoutage" class="sim-tab text-left p-3.5 rounded-xl border transition-all duration-200 bg-white/60 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-500 font-semibold text-xs sm:text-sm flex flex-col gap-1.5">
+                  <div class="flex items-center justify-between flex-wrap gap-1">
+                    <span class="font-bold flex items-center gap-1.5"><i data-lucide="cloud-off" class="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0"></i> Cloud Outage</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-700 dark:text-blue-300 font-medium">Operational</span>
                   </div>
-                  <span class="text-[11px] text-slate-400 font-normal line-clamp-1">Vendor failure & business loss</span>
+                  <span class="text-[11px] text-slate-500 dark:text-slate-400 font-normal line-clamp-1">Vendor failure & business loss</span>
                 </button>
               </div>
             </div>
 
             <!-- Interactive Sliders -->
-            <div class="glass-card p-6 rounded-3xl border border-white/10 space-y-6 shadow-2xl backdrop-blur-xl">
-              <label class="block text-xs font-bold uppercase tracking-wider text-cyan-300 font-outfit flex items-center gap-2">
-                <i data-lucide="sliders" class="w-4 h-4 text-cyan-400"></i>
+            <div class="glass-card p-6 rounded-3xl border border-slate-200 dark:border-white/10 space-y-6 shadow-2xl backdrop-blur-xl">
+              <label class="block text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-300 font-outfit flex items-center gap-2">
+                <i data-lucide="sliders" class="w-4 h-4 text-cyan-600 dark:text-cyan-400"></i>
                 2. Configure Organization Parameters
               </label>
 
               <!-- Slider 1: Revenue -->
               <div class="space-y-2">
                 <div class="flex items-center justify-between text-sm">
-                  <span class="text-slate-300 font-medium flex items-center gap-1.5">
-                    <i data-lucide="dollar-sign" class="w-4 h-4 text-emerald-400"></i> Annual Gross Revenue
+                  <span class="text-slate-700 dark:text-slate-300 font-medium flex items-center gap-1.5">
+                    <i data-lucide="dollar-sign" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i> Annual Gross Revenue
                   </span>
                   <span id="sim-revenue-val" class="font-extrabold text-cyan-400 font-outfit text-base">$10,000,000</span>
                 </div>
-                <input type="range" id="sim-revenue-slider" min="1000000" max="100000000" step="1000000" value="10000000" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400">
-                <div class="flex justify-between text-[10px] text-slate-400 font-semibold">
+                <input type="range" id="sim-revenue-slider" min="1000000" max="100000000" step="1000000" value="10000000" class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500">
+                <div class="flex justify-between text-[10px] text-slate-500 dark:text-slate-400 font-semibold">
                   <span>$1M</span>
                   <span>$25M</span>
                   <span>$50M</span>
@@ -513,13 +513,13 @@
               <!-- Slider 2: Record Count -->
               <div class="space-y-2">
                 <div class="flex items-center justify-between text-sm">
-                  <span class="text-slate-300 font-medium flex items-center gap-1.5">
-                    <i data-lucide="users" class="w-4 h-4 text-cyan-400"></i> Active Records / Headcount
+                  <span class="text-slate-700 dark:text-slate-300 font-medium flex items-center gap-1.5">
+                    <i data-lucide="users" class="w-4 h-4 text-cyan-600 dark:text-cyan-400"></i> Active Records / Headcount
                   </span>
                   <span id="sim-records-val" class="font-extrabold text-cyan-400 font-outfit text-base">15,000 Records</span>
                 </div>
-                <input type="range" id="sim-records-slider" min="500" max="100000" step="500" value="15000" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400">
-                <div class="flex justify-between text-[10px] text-slate-400 font-semibold">
+                <input type="range" id="sim-records-slider" min="500" max="100000" step="500" value="15000" class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500">
+                <div class="flex justify-between text-[10px] text-slate-500 dark:text-slate-400 font-semibold">
                   <span>500</span>
                   <span>25,000</span>
                   <span>50,000</span>
@@ -539,12 +539,12 @@
           <!-- Right Column: Live Output & Coverage Metrics (lg:col-span-6) -->
           <div class="lg:col-span-6 space-y-6">
             
-            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-cyan-500/30 bg-slate-900/80 shadow-2xl relative overflow-hidden backdrop-blur-2xl">
+            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-cyan-500/30 bg-white/80 dark:bg-slate-900/80 shadow-2xl relative overflow-hidden backdrop-blur-2xl">
               <!-- Header indicator -->
-              <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+              <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-white/10">
                 <div>
-                  <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Simulated Financial Risk</span>
-                  <h3 id="sim-scenario-title" class="text-xl font-bold font-outfit text-white">Ransomware Extortion Attack</h3>
+                  <span class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">Simulated Financial Risk</span>
+                  <h3 id="sim-scenario-title" class="text-xl font-bold font-outfit text-slate-900 dark:text-white">Ransomware Extortion Attack</h3>
                 </div>
                 <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold">
                   <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
@@ -553,7 +553,7 @@
               </div>
 
               <!-- Uninsured Exposure vs Covered Comparison -->
-              <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
                 <!-- Uninsured Box -->
                 <div class="p-4 rounded-2xl bg-red-500/10 border border-red-500/30 text-left rtl:text-right">
                   <span class="text-[11px] font-semibold text-red-300 uppercase tracking-wider block mb-1">Uninsured Direct Loss</span>
@@ -571,15 +571,15 @@
 
               <!-- Live Cost Breakdown Bars -->
               <div class="space-y-4 mb-6">
-                <span class="text-xs font-bold text-slate-300 uppercase tracking-wider block font-outfit">Financial Expense Allocation</span>
+                <span class="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-outfit">Financial Expense Allocation</span>
                 
                 <!-- Bar 1: Forensics & IT -->
                 <div class="space-y-1.5">
                   <div class="flex justify-between text-xs font-medium">
-                    <span class="text-slate-300 flex items-center gap-1.5" id="sim-label1"><i data-lucide="search" class="w-3.5 h-3.5 text-cyan-400"></i> Forensic Investigation & Decryption</span>
+                    <span class="text-slate-600 dark:text-slate-300 flex items-center gap-1.5" id="sim-label1"><i data-lucide="search" class="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400"></i> Forensic Investigation & Decryption</span>
                     <span id="sim-bar1-val" class="font-bold text-cyan-300">$380,000</span>
                   </div>
-                  <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div id="sim-bar1-fill" class="h-full bg-cyan-400 rounded-full transition-all duration-500" style="width: 30%"></div>
                   </div>
                 </div>
@@ -587,10 +587,10 @@
                 <!-- Bar 2: Extortion & Ransom -->
                 <div class="space-y-1.5">
                   <div class="flex justify-between text-xs font-medium">
-                    <span class="text-slate-300 flex items-center gap-1.5" id="sim-label2"><i data-lucide="key" class="w-3.5 h-3.5 text-amber-400"></i> Ransom Reimbursement & Negotiation</span>
+                    <span class="text-slate-600 dark:text-slate-300 flex items-center gap-1.5" id="sim-label2"><i data-lucide="key" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i> Ransom Reimbursement & Negotiation</span>
                     <span id="sim-bar2-val" class="font-bold text-amber-300">$600,000</span>
                   </div>
-                  <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div id="sim-bar2-fill" class="h-full bg-amber-400 rounded-full transition-all duration-500" style="width: 45%"></div>
                   </div>
                 </div>
@@ -598,10 +598,10 @@
                 <!-- Bar 3: Business Interruption -->
                 <div class="space-y-1.5">
                   <div class="flex justify-between text-xs font-medium">
-                    <span class="text-slate-300 flex items-center gap-1.5" id="sim-label3"><i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-400"></i> Business Downtime Revenue Loss</span>
+                    <span class="text-slate-600 dark:text-slate-300 flex items-center gap-1.5" id="sim-label3"><i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i> Business Downtime Revenue Loss</span>
                     <span id="sim-bar3-val" class="font-bold text-emerald-300">$350,000</span>
                   </div>
-                  <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div id="sim-bar3-fill" class="h-full bg-emerald-400 rounded-full transition-all duration-500" style="width: 25%"></div>
                   </div>
                 </div>
@@ -609,10 +609,10 @@
                 <!-- Bar 4: Legal & Notification -->
                 <div class="space-y-1.5">
                   <div class="flex justify-between text-xs font-medium">
-                    <span class="text-slate-300 flex items-center gap-1.5" id="sim-label4"><i data-lucide="scale" class="w-3.5 h-3.5 text-purple-400"></i> Legal Defense & Regulatory Fines</span>
+                    <span class="text-slate-600 dark:text-slate-300 flex items-center gap-1.5" id="sim-label4"><i data-lucide="scale" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i> Legal Defense & Regulatory Fines</span>
                     <span id="sim-bar4-val" class="font-bold text-purple-300">$150,000</span>
                   </div>
-                  <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div id="sim-bar4-fill" class="h-full bg-purple-400 rounded-full transition-all duration-500" style="width: 15%"></div>
                   </div>
                 </div>
@@ -620,14 +620,14 @@
               </div>
 
               <!-- Recommendation Footer Banner -->
-              <div class="p-4 rounded-2xl bg-cyan-950/60 border border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="p-4 rounded-2xl bg-cyan-50/80 dark:bg-cyan-950/60 border border-cyan-300 dark:border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="flex items-center space-x-3 rtl:space-x-reverse text-left ltr:text-left rtl:text-right">
-                  <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center flex-shrink-0 text-cyan-300">
+                  <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center flex-shrink-0 text-cyan-700 dark:text-cyan-300">
                     <i data-lucide="shield-check" class="w-5 h-5"></i>
                   </div>
                   <div>
-                    <span class="text-[11px] text-cyan-300 uppercase font-semibold block">Recommended Sub-Limit Tier</span>
-                    <h4 id="sim-limit-recommendation" class="text-sm font-bold text-white font-outfit">$3M - $5M Enterprise Cyber Coverage</h4>
+                    <span class="text-[11px] text-cyan-700 dark:text-cyan-300 uppercase font-semibold block">Recommended Sub-Limit Tier</span>
+                    <h4 id="sim-limit-recommendation" class="text-sm font-bold text-slate-900 dark:text-white font-outfit">$3M - $5M Enterprise Cyber Coverage</h4>
                   </div>
                 </div>
 
@@ -731,7 +731,7 @@
             </div>
 
             <!-- Stats Rows -->
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-3 gap-2 sm:gap-6">
               <div>
                 <div class="text-3xl sm:text-4xl font-extrabold text-brand-primary font-outfit flex items-baseline">
                   <span class="stat-counter" data-target="99">0</span>%
@@ -917,7 +917,7 @@
       <!-- Copyright row -->
       <div class="footer-copyright pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
         <p>&copy; 2026 CyberGuard Liability Insurance Brokerage. All rights reserved.</p>
-        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-4 sm:mt-0">
           <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy &amp; Compliance Policy</a>
           <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Terms of Insurance Brokerage</a>
         </div>
