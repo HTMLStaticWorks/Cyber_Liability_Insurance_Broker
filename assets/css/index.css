@@ -689,3 +689,30 @@ main ol li {
     max-width: calc(50% - 1rem) !important;
   }
 }
+
+/* --- Nav Utility Buttons (RTL, Theme, Mobile Menu) Hover Border Highlights --- */
+.rtl-toggle,
+.theme-toggle,
+#mobile-menu-btn {
+  transition: all 0.25s ease !important;
+}
+
+/* Light Mode: Clear contrasting border & subtle shadow on hover */
+.rtl-toggle:hover,
+.theme-toggle:hover,
+#mobile-menu-btn:hover {
+  border-color: #06b6d4 !important; /* brand-primary cyan border */
+  background-color: #f1f5f9 !important; /* slate-100 */
+  color: #0891b2 !important; /* cyan-700 text/icon */
+  box-shadow: 0 0 0 1px #06b6d4, 0 4px 12px rgba(6, 182, 212, 0.15) !important;
+}
+
+/* Dark Mode: Vibrant glowing cyan border on hover */
+.dark .rtl-toggle:hover,
+.dark .theme-toggle:hover,
+.dark #mobile-menu-btn:hover {
+  border-color: #22d3ee !important; /* cyan-400 */
+  background-color: #1e293b !important; /* slate-800 */
+  color: #22d3ee !important; /* cyan-400 */
+  box-shadow: 0 0 0 1px #22d3ee, 0 0 16px rgba(34, 211, 238, 0.25) !important;
+}
